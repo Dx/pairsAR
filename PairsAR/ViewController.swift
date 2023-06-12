@@ -7,6 +7,7 @@
 
 import UIKit
 import RealityKit
+import Combine
 
 class ViewController: UIViewController {
     
@@ -35,6 +36,32 @@ class ViewController: UIViewController {
             card.position = [x*0.1, 0, z*0.1]
             anchor.addChild(card)
         }
+        
+        var cancellable: AnyCancellable? = nil
+        
+        cancellable = ModelEntity.loadModelAsync(named: "01")
+            .append(ModelEntity.loadModelAsync(named: "02"))
+            .collect()
+            .sink(receiveCompletion: {error in
+                print("Error: \(error)")
+                cancellable?.cancel()
+            }, receiveValue: { entities in
+                var objects: [ModelEntity] = []
+                for entity in entities {
+                    entity.setScale(SIMD3<Float>(0.002, 0.002, 0.002), relativeTo: anchor)
+                    entity.generateCollisionShapes(recursive: true)
+                    for _ in 1...2 {
+                        objects.append(entity.clone(recursive: true))
+                    }
+                }
+                
+                objects.shuffle()
+                
+                for (index, object) in objects.enumerated() {
+                    cards[index].addChild(object)
+                }
+            })
+        
     }
     
     
@@ -50,7 +77,7 @@ class ViewController: UIViewController {
                 flipUpTransform.rotation = simd_quatf(angle: .pi, axis: [1, 0,0])
                 card.move(to: flipUpTransform, relativeTo: card.parent, duration: 0.25, timingFunction: .easeInOut)
             }
-        }        
+        }
     }
 }
 
