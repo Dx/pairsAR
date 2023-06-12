@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         arView.scene.addAnchor(anchor)
         
         var cards: [Entity] = []
-        for _ in 1...4 {
+        for _ in 1...16 {
             let box = MeshResource.generateBox(width: 0.04, height: 0.002, depth: 0.04)
             let metalMaterial = SimpleMaterial(color: .gray, isMetallic: true)
             let model = ModelEntity(mesh: box, materials: [metalMaterial])
@@ -30,17 +30,30 @@ class ViewController: UIViewController {
         }
         
         for (index, card) in cards.enumerated() {
-            let x = Float(index % 2)
-            let z = Float(index / 2)
+            let x = Float(index % 4) - 1.5
+            let z = Float(index / 4) - 1.5
             
             card.position = [x*0.1, 0, z*0.1]
             anchor.addChild(card)
         }
         
+        let boxSize: Float = 0.7
+        let occlussionBoxMesh = MeshResource.generateBox(size: boxSize)
+        let occlussionBox = ModelEntity(mesh: occlussionBoxMesh, materials: [OcclusionMaterial()])
+        
+        occlussionBox.position.y = -boxSize/2
+        anchor.addChild(occlussionBox)
+        
         var cancellable: AnyCancellable? = nil
         
         cancellable = ModelEntity.loadModelAsync(named: "01")
             .append(ModelEntity.loadModelAsync(named: "02"))
+            .append(ModelEntity.loadModelAsync(named: "03"))
+            .append(ModelEntity.loadModelAsync(named: "04"))
+            .append(ModelEntity.loadModelAsync(named: "05"))
+            .append(ModelEntity.loadModelAsync(named: "06"))
+            .append(ModelEntity.loadModelAsync(named: "07"))
+            .append(ModelEntity.loadModelAsync(named: "08"))
             .collect()
             .sink(receiveCompletion: {error in
                 print("Error: \(error)")
@@ -59,7 +72,10 @@ class ViewController: UIViewController {
                 
                 for (index, object) in objects.enumerated() {
                     cards[index].addChild(object)
+                    cards[index].transform.rotation = simd_quatf(angle:.pi, axis: [1,0,0])
                 }
+                
+                cancellable?.cancel()
             })
         
     }

@@ -18,13 +18,12 @@
 		E172EAB92A3404BB00D67547 /* PairsARUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E172EAB82A3404BB00D67547 /* PairsARUITestsLaunchTests.swift */; };
 		E172EACE2A36B23100D67547 /* 04.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E172EAC52A36B22F00D67547 /* 04.usdz */; };
 		E172EACF2A36B23100D67547 /* 06.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E172EAC62A36B22F00D67547 /* 06.usdz */; };
-		E172EAD02A36B23100D67547 /* LunarRover_English.reality in Resources */ = {isa = PBXBuildFile; fileRef = E172EAC72A36B22F00D67547 /* LunarRover_English.reality */; };
 		E172EAD12A36B23100D67547 /* 05.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E172EAC82A36B22F00D67547 /* 05.usdz */; };
 		E172EAD22A36B23100D67547 /* 03.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E172EAC92A36B23000D67547 /* 03.usdz */; };
 		E172EAD32A36B23100D67547 /* 02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E172EACA2A36B23000D67547 /* 02.usdz */; };
 		E172EAD42A36B23100D67547 /* 01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E172EACB2A36B23000D67547 /* 01.usdz */; };
-		E172EAD52A36B23100D67547 /* hab_en.reality in Resources */ = {isa = PBXBuildFile; fileRef = E172EACC2A36B23100D67547 /* hab_en.reality */; };
-		E172EAD62A36B23100D67547 /* CosmonautSuit_en.reality in Resources */ = {isa = PBXBuildFile; fileRef = E172EACD2A36B23100D67547 /* CosmonautSuit_en.reality */; };
+		E172EAD92A36B8F700D67547 /* 08.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E172EAD72A36B8F700D67547 /* 08.usdz */; };
+		E172EADA2A36B8F700D67547 /* 07.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E172EAD82A36B8F700D67547 /* 07.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,13 +58,12 @@
 		E172EAB82A3404BB00D67547 /* PairsARUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairsARUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E172EAC52A36B22F00D67547 /* 04.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 04.usdz; sourceTree = "<group>"; };
 		E172EAC62A36B22F00D67547 /* 06.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 06.usdz; sourceTree = "<group>"; };
-		E172EAC72A36B22F00D67547 /* LunarRover_English.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = LunarRover_English.reality; sourceTree = "<group>"; };
 		E172EAC82A36B22F00D67547 /* 05.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 05.usdz; sourceTree = "<group>"; };
 		E172EAC92A36B23000D67547 /* 03.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 03.usdz; sourceTree = "<group>"; };
 		E172EACA2A36B23000D67547 /* 02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 02.usdz; sourceTree = "<group>"; };
 		E172EACB2A36B23000D67547 /* 01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 01.usdz; sourceTree = "<group>"; };
-		E172EACC2A36B23100D67547 /* hab_en.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = hab_en.reality; sourceTree = "<group>"; };
-		E172EACD2A36B23100D67547 /* CosmonautSuit_en.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = CosmonautSuit_en.reality; sourceTree = "<group>"; };
+		E172EAD72A36B8F700D67547 /* 08.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 08.usdz; sourceTree = "<group>"; };
+		E172EAD82A36B8F700D67547 /* 07.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 07.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,15 +114,14 @@
 		E172EA952A3404BA00D67547 /* PairsAR */ = {
 			isa = PBXGroup;
 			children = (
-				E172EACD2A36B23100D67547 /* CosmonautSuit_en.reality */,
-				E172EACC2A36B23100D67547 /* hab_en.reality */,
-				E172EAC72A36B22F00D67547 /* LunarRover_English.reality */,
 				E172EACB2A36B23000D67547 /* 01.usdz */,
 				E172EACA2A36B23000D67547 /* 02.usdz */,
 				E172EAC92A36B23000D67547 /* 03.usdz */,
 				E172EAC52A36B22F00D67547 /* 04.usdz */,
 				E172EAC82A36B22F00D67547 /* 05.usdz */,
 				E172EAC62A36B22F00D67547 /* 06.usdz */,
+				E172EAD82A36B8F700D67547 /* 07.usdz */,
+				E172EAD72A36B8F700D67547 /* 08.usdz */,
 				E172EA962A3404BA00D67547 /* AppDelegate.swift */,
 				E172EA982A3404BA00D67547 /* ViewController.swift */,
 				E172EA9A2A3404BA00D67547 /* Experience.rcproject */,
@@ -256,13 +253,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E172EAD52A36B23100D67547 /* hab_en.reality in Resources */,
+				E172EAD92A36B8F700D67547 /* 08.usdz in Resources */,
 				E172EACE2A36B23100D67547 /* 04.usdz in Resources */,
 				E172EAA32A3404BB00D67547 /* LaunchScreen.storyboard in Resources */,
 				E172EAA02A3404BB00D67547 /* Assets.xcassets in Resources */,
-				E172EAD62A36B23100D67547 /* CosmonautSuit_en.reality in Resources */,
-				E172EAD02A36B23100D67547 /* LunarRover_English.reality in Resources */,
 				E172EAD12A36B23100D67547 /* 05.usdz in Resources */,
+				E172EADA2A36B8F700D67547 /* 07.usdz in Resources */,
 				E172EAD32A36B23100D67547 /* 02.usdz in Resources */,
 				E172EAD42A36B23100D67547 /* 01.usdz in Resources */,
 				E172EAD22A36B23100D67547 /* 03.usdz in Resources */,
